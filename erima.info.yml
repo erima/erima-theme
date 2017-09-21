@@ -1,10 +1,10 @@
-name: Nerd Theme
+name: ERIMA
 type: theme
 base theme: stable
-description: NERDS!!!
-alt text: Theme for pizza.graphics.
+description: Wah-woh woh wohwohwohwohwoh 
+alt text: Theme for erima.me
 core: 8.x
 package: other
 hidden: false
 libraries:
-  - nerd/global-css
+  - erima/global-css
