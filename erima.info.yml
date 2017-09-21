@@ -1,0 +1,10 @@
+name: Nerd Theme
+type: theme
+base theme: stable
+description: NERDS!!!
+alt text: Theme for pizza.graphics.
+core: 8.x
+package: other
+hidden: false
+libraries:
+  - nerd/global-css

@@ -1,0 +1,7 @@
+global-css:
+  css:
+    theme:
+      css/reset.css: {}
+      'https://fonts.googleapis.com/css?family=Source+Sans+Pro|Salsa': { type: external, minified: true }
+      css/nerd.css: {}
+
