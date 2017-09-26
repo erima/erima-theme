@@ -1,18 +1,28 @@
+p {
+	margin: 1em 0;
+	line-height: 1.4;
+}
+
 header {
 	display: flex;
 	height: 30vh;
 	background-image: url("../assets/devotion.jpeg");
 	background-size: cover;
-	margin-bottom: 2rem;
 	font-family: helvetica, arial, sans-serif;
+	margin-top: 0;
+	border-radius: 4px;
 	}
 	
 .header {
 	width: 30vw;
 	background-color: hsla(200, 100%, 100%, .8);
 	padding: 2rem;
-	box-shadow: 5px 0 2px hsla(100, 10%, 10%, .5);
+	box-shadow: 3px 0 2px hsla(100, 10%, 10%, .5);
+	border-radius: 4px 0 0 4px;
 	}
+
+header ul {
+	list-style-type: none;
 
 #block-erima-branding {
 	font-size: 2rem;
@@ -24,8 +34,14 @@ header {
 	}	
 	
 article {
-	margin-bottom: 2rem;}
+	margin-bottom: 2rem;
+	}
 	
 article h2 {
 	font-size: 2rem;
+	}
+	
+main {
+	color: red;
+	width: 90vw;
 	}
