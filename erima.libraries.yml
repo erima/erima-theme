@@ -2,6 +2,6 @@ global-css:
   css:
     theme:
       css/reset.css: {}
-      'https://fonts.googleapis.com/css?family=Source+Sans+Pro|Salsa': { type: external, minified: true }
+      'https://fonts.googleapis.com/css?family=Merriweather:300|Montserrat:800': { type: external, minified: true }
       css/erima.css: {}
 
