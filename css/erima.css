@@ -3,7 +3,6 @@ html {}
 body {
 	font-family: 'Merriweather', serif;
 	line-height: 1.4;
-	font-size: 14px;
 	}
 
 @supports (display:grid) {
