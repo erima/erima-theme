@@ -2,13 +2,12 @@ html {}
 
 body {
 	font-family: 'Merriweather', serif;
-
 	line-height: 1.4;
 	font-size: 14px;
 	}
 
 @supports (display:grid) {
-	body {
+	.dialog-off-canvas-main-canvas {
 		display: grid;
 		grid-gap: 1vw;
 		grid-template-areas: "header header header"
@@ -126,4 +125,3 @@ main ul {
 	main {
 		max-width: 60vw;
 		}
-		
