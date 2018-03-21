@@ -1,8 +1,8 @@
 html {}
-	
+
 body {
 	font-family: 'Merriweather', serif;
-	
+
 	line-height: 1.4;
 	font-size: 14px;
 	}
@@ -20,7 +20,7 @@ body {
 		grid-area: header;
 		}
 	footer {
-		grid-area: footer;		
+		grid-area: footer;
 		}
 	main {
 		grid-area: main;
@@ -30,7 +30,7 @@ body {
 a {
 	color:	hsla(209, 48%, 49%, 1);
 	}
-	
+
 h1, h2, h3, h4, h5, h6, header a {
 	display: block;
 	font-family: 'Montserrat', sans-serif;
@@ -53,16 +53,16 @@ header, footer {
 	display: flex;}
 
 header {
-	
+
 	/*border: 2vw solid white;*/
 	background-image: url("../assets/devotion.jpeg");
 	background-size: cover;
 	margin-top: 0;
-	
+
 	}
 
 header a {	text-decoration: none;}
-	
+
 .header {
 	width: 40vw;
 	background-color: hsla(200, 100%, 100%, .8);
@@ -82,7 +82,7 @@ footer {
 
 footer a {
 	color: white;
-	}	
+	}
 
 .front_page {
 	min-height: 100vh;
@@ -91,28 +91,39 @@ footer a {
 article {
 	margin-bottom: 2rem;
 	}
-	
+
 main {
 	width: 90vw;
+	min-height: 60vh;
 	margin: auto;
 	padding-top: 2rem;
 	}
+
+main nav {
+	margin: 1.3rem 0;
 
 main h1 {
 	margin-bottom: 1.5rem;
 	line-height: 1.7;
 	}
-	
+
 
 main ul {
 	list-style-type: disc;
 	list-style-position: inside;
 	padding: 1rem;
 	}
-	
+
 
 .links {list-style-type: none; }
 
 .inline {display: inline;}
 
 .comment-forbidden {display: none;}
+
+
+@media (min-width: 30em) {
+	main {
+		max-width: 60vw;
+		}
+		
