@@ -106,11 +106,12 @@ main h1 {
 	line-height: 1.7;
 	}
 
-
+main ul, main ol {
+	padding: 1vh 1vw;
+}
 main ul {
 	list-style-type: disc;
 	list-style-position: inside;
-	padding-left: 1vw;
 	}
 
 
