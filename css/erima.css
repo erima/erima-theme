@@ -118,6 +118,13 @@ main ul {
 	list-style-position: inside;
 	}
 
+main img {
+	display: block;
+	max-height: 100%;
+	max-width:100%;
+	width: auto;
+	height: auto;
+}
 
 .links {list-style-type: none; }
 
