@@ -1,139 +1,162 @@
 html {}
 
 body {
-	font-family: 'Lora', serif;
-	line-height: 1.4;
-	}
+  font-family: 'Lora', serif;
+  line-height: 1.4;
+}
 
 @supports (display:grid) {
-	.dialog-off-canvas-main-canvas {
-		display: grid;
-		grid-gap: 1vw;
-		grid-template-areas: "header header header"
-				     		"main main main"
-				    		"footer footer footer";
-		grid-template-columns: repeat(3, 1fr);
-		}
-	header {
-		grid-area: header;
-		}
-	footer {
-		grid-area: footer;
-		}
-	main {
-		grid-area: main;
-		}
+  .dialog-off-canvas-main-canvas {
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-areas: "header header header" "main main main" "footer footer footer";
+    grid-template-columns: repeat(3, 1fr);
+  }
+  header {
+    grid-area: header;
+  }
+  footer {
+    grid-area: footer;
+  }
+  main {
+    grid-area: main;
+  }
 }
 
 a {
-	color:	hsla(209, 48%, 49%, 1);
-	}
-
-h1, h2, h3, h4, h5, h6, header a {
-	display: block;
-	font-family: 'Roboto', sans-serif;
-	}
-
-h2, h3, h4, h5, h6 {
-	color: hsla(294, 0%, 40%, 1);
+  color: hsla(209, 48%, 49%, 1);
 }
 
-#block-erima-branding a {font-size: 1.7em;}
-h1 {font-size: 1.6em;}
-h2 {font-size: 1.30em;}
-h3 {font-size: 1.20em;}
-h4 {font-size: 1.10em;}
-h5 {font-size: 1.05em;}
-h6 {font-size: 1em;}
+h1, h2, h3, h4, h5, h6, header a {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2, h3, h4, h5, h6 {
+  color: hsla(294, 0%, 40%, 1);
+}
+
+#block-erima-branding a {
+  font-size: 1.7em;
+}
+
+h1 {
+  font-size: 1.6em;
+}
 
 h2 {
-	border-bottom: 1px solid hsla(294, 0%, 40%, 1);
+  font-size: 1.30em;
+}
+
+h3 {
+  font-size: 1.20em;
+}
+
+h4 {
+  font-size: 1.10em;
+}
+
+h5 {
+  font-size: 1.05em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+h2 {
+  border-bottom: 1px solid hsla(294, 0%, 40%, 1);
 }
 
 p, main ul, main ol {
-	margin: 1em 0;
+  margin: 1em 0;
 }
 
 header, footer {
-	display: flex;}
-
-header {
-
-	/*border: 2vw solid white;*/
-	background-image: url("../assets/devotion.jpeg");
-	background-size: cover;
-	margin-top: 0;
-
-	}
-
-header a {	text-decoration: none;}
-
-.header {
-	width: 40vw;
-	background-color: hsla(200, 100%, 100%, .8);
-	padding: 4vw;
-	}
-
-header ul {
-	list-style-type: none;
+  display: flex;
 }
 
+header {
+  /*border: 2vw solid white;*/
+  background-image: url("../assets/devotion.jpeg");
+  background-size: cover;
+  margin-top: 0;
+}
+
+header a {
+  text-decoration: none;
+}
+
+.header {
+  width: 40vw;
+  background-color: hsla(200, 100%, 100%, .8);
+  padding: 4vw;
+}
+
+header ul {
+  list-style-type: none;
+}
 
 footer {
-	background-color: hsla(209, 48%, 49%, 1);
-	color: white;
-	padding: 4vw;
-	}
+  background-color: hsla(209, 48%, 49%, 1);
+  color: white;
+  padding: 4vw;
+}
 
 footer a {
-	color: white;
-	}
+  color: white;
+}
 
 .front_page {
-	min-height: 100vh;
+  min-height: 100vh;
 }
 
 article {
-	margin-bottom: 2rem;
-	}
+  margin-bottom: 2rem;
+}
 
 main {
-	width: 90vw;
-	min-height: 60vh;
-	margin: auto;
-	padding-top: 2rem;
-	}
+  width: 90vw;
+  min-height: 60vh;
+  margin: auto;
+  padding-top: 2rem;
+}
 
 main nav {
-	margin: 1.3rem 0;
+  margin: 1.3rem 0;
 }
 
 main h1 {
-	margin-bottom: 1.5rem;
-	line-height: 1.7;
-	}
-
-main ul {
-	list-style-type: disc;
-	list-style-position: inside;
-	}
-
-main img {
-	display: block;
-	max-height: 100%;
-	max-width:100%;
-	width: auto;
-	height: auto;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
 }
 
-.links {list-style-type: none; }
+main ul {
+  list-style-type: disc;
+  list-style-position: inside;
+}
 
-.inline {display: inline;}
+main img {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+}
 
-.comment-forbidden {display: none;}
+.links {
+  list-style-type: none;
+}
 
+.inline {
+  display: inline;
+}
+
+.comment-forbidden {
+  display: none;
+}
 
 @media (min-width: 30em) {
-	main {
-		max-width: 60vw;
-		}
+  main {
+    max-width: 60vw;
+  }
