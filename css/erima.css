@@ -73,7 +73,7 @@ CSS GRID
 
 these are styles for the topic at hand */
 
-body {
+.dialog-off-canvas-main-canvas {
   display: grid;
   grid-template-columns: 3fr 9fr;
   grid-template-rows: repeat(auto, 1fr);
