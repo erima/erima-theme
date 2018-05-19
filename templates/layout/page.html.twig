@@ -45,10 +45,8 @@
 #}
   <header role="banner">
     {{ page.header }}
-    {{ page.primary_menu }}
-    {{ page.secondary_menu }}
   </header>
-  
+
   {{ page.breadcrumb }}
 
   {{ page.highlighted }}
@@ -61,20 +59,19 @@
     <div class="layout-content">
       {{ page.content }}
     </div>{# /.layout-content #}
-
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
-
   </main>
+
+  {% if page.sidebar_first %}
+    <nav class="layout-sidebar-first">
+      {{ page.sidebar_first }}
+    </nav>
+  {% endif %}
+
+  {% if page.sidebar_second %}
+    <nav class="layout-sidebar-second">
+      {{ page.sidebar_second }}
+    </nav>
+  {% endif %}
 
   {% if page.footer %}
     <footer role="contentinfo">
