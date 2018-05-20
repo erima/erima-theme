@@ -9,9 +9,10 @@ body {
   background-color: hsl(150, 10%, 90%);
 }
 
-i {
-  background-color: yellow;
+p {
+  margin: 1em 0;
 }
+
 img {
   width: 100%;
   height: auto;
@@ -143,6 +144,9 @@ article header figure {
   grid-column: 2 / end;
 }
 
+article img {
+  grid-column: 1 / end;
+}
 article h2 {
   grid-column: 1/ span 3;
 }
@@ -152,5 +156,8 @@ article p {
 
 article aside {
   grid-column: end / 3;
+}
 
+article .cp_embed_wrapper {
+  grid-column: 1 / span 4;
 }
