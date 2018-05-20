@@ -18,7 +18,7 @@ img {
 }
 
 footer li a,
-nav li a {
+.layout-sidebar-first li a {
   background-color: black;
   color: white;
 }
@@ -29,11 +29,12 @@ header {
 
 header, nav, footer, h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
+    font-family: "Ubuntu Mono", monospace;
 }
 
 header h1, footer h1 {
-  font-size: 2rem;
-/*  padding: 1rem 0;*/
+  font-size: 1.25rem;
+
 }
 
 footer h1 {
