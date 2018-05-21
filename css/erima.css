@@ -90,7 +90,7 @@ article aside {
   background-color: hsla(0, 0%, 0%, .2);
   font-size: 0.7em;
   padding: 2em;
-  font-style: italic;
+  font-style:
 }
 
 /*
@@ -160,4 +160,11 @@ article aside {
 
 article .cp_embed_wrapper {
   grid-column: 1 / span 4;
+}
+
+/* Hack to disable subarticles from getting their own grid. */
+
+article article, article article article {
+  display: block;
+  width: 100%;
 }
