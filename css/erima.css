@@ -168,3 +168,7 @@ article article, article article article {
   display: block;
   width: 100%;
 }
+
+article .embedded-entity {
+  grid-column: 1/end;
+}
