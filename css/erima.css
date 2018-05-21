@@ -1,8 +1,7 @@
 /* these are styles for codepen */
 body {
-  font-family: helvetica, sans-serif;
+  font-family: "Noto Sans", helvetica, sans-serif;
   line-height: 1.5;
-  /*    background-color: lime;*/
   padding: 5vw 5vh;
   max-width: 80vw;
   margin: auto;
@@ -28,7 +27,7 @@ header {
   margin: 20px 0;
 }
 
-header, nav, footer, h1, h2, h3, h4, h5, h6 {
+header, .dialog-off-canvas-main-canvas nav, footer, h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     font-family: "Ubuntu Mono", monospace;
 }
@@ -41,6 +40,32 @@ header h1, footer h1 {
 footer h1 {
   font-size: 1rem;
   text-decoration: underline;
+}
+
+
+.dialog-off-canvas-main-canvas nav li,
+footer li {
+  margin: 2em 0;
+}
+
+.dialog-off-canvas-main-canvas nav li:nth-child(1n),
+footer li:nth-child(1n) {
+  transform: rotate(2deg);
+}
+
+.dialog-off-canvas-main-canvas nav li:nth-child(2n),
+footer li:nth-child(2n) {
+  transform: rotate(-2deg);
+}
+
+.dialog-off-canvas-main-canvas nav li:nth-child(4n),
+footer li:nth-child(4n) {
+  transform: rotate(-5deg);
+}
+
+.dialog-off-canvas-main-canvas nav a,
+footer a {
+  padding: 0.6em;
 }
 
 article h1, article h2 {
@@ -91,31 +116,6 @@ header {
 nav,
 footer {
   grid-column: 1 / span 1;
-}
-
-nav li,
-footer li {
-  margin: 2em 0;
-}
-
-nav li:nth-child(1n),
-footer li:nth-child(1n) {
-  transform: rotate(2deg);
-}
-
-nav li:nth-child(2n),
-footer li:nth-child(2n) {
-  transform: rotate(-2deg);
-}
-
-nav li:nth-child(4n),
-footer li:nth-child(4n) {
-  transform: rotate(-5deg);
-}
-
-nav a,
-footer a {
-  padding: 0.6em;
 }
 
 article {
