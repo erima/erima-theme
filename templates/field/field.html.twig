@@ -39,7 +39,6 @@
 
 {% if label_hidden %}
   {% if multiple %}
-
       {% for item in items %}
         {{ item.content }}
       {% endfor %}
@@ -53,7 +52,7 @@
 
     {{ label }}
     {% if multiple %}
-
+    
     {% endif %}
     {% for item in items %}
       {{ item.content }}
@@ -61,5 +60,5 @@
     {% if multiple %}
 
     {% endif %}
-  
+
 {% endif %}
