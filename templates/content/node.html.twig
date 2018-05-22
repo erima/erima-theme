@@ -72,21 +72,12 @@
 #}
 <article{{ attributes }}>
 
-    {% if not page %}
-      <header>
-        <h1{{ title_attributes }}>
-          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-        </h1>
-      </header>
-    {% endif %}
-
-    {% if page %}
       <header>
         <h1 {{ title_attributes }}>
         {{ label }}
         </h1>
       </header>
-    {% endif %}
+
 
     {{ content }}
 
