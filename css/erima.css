@@ -5,7 +5,13 @@ body {
   padding: 5vw 5vh;
   margin: auto;
   background-color: hsl(150, 10%, 90%);
+  background-image: linear-gradient(hsla(150, 10%, 80%, 0.2) 2px, transparent 0),
+    linear-gradient(90deg, hsla(150, 10%, 80%, 0.2) 2px, transparent 0),
+    linear-gradient(hsla(150, 10%, 80%, 0.2) 1px, transparent 0),
+    linear-gradient(90deg, hsla(150, 10%, 80%, 0.2) 1px, transparent 0);
+  background-size: 75px 75px, 75px 75px, 15px 15px, 15px 15px;
 }
+
 a {
   color: hsl(280, 100%,30%);
 }
@@ -27,6 +33,7 @@ footer li a,
 
 header {
   margin: 20px 0;
+  text-align: center;
 }
 
 header, .dialog-off-canvas-main-canvas nav, footer, h1, h2, h3, h4, h5, h6 {
@@ -43,15 +50,15 @@ footer h1 {
   font-size: 1rem;
   text-decoration: underline;
 }
-.dialog-off-canvas-main-canvas nav ul,
-footer ul {
+.tasks ul {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-.dialog-off-canvas-main-canvas nav li,
-footer li {}
-
+.tasks li {
+    margin: 2em 0;
+  }
 .dialog-off-canvas-main-canvas nav li:nth-child(1n),
 footer li:nth-child(1n) {
   transform: rotate(2deg);
@@ -81,12 +88,12 @@ article > .hero img {
 }
 
 article header {
-  background-color: hsl(20, 100%, 75%);
+  background-color: hsla(20, 100%, 75%, .8);
   font-size: 1.5rem;
 }
 
 article h2 {
-  background-color: hsl(200, 70%, 75%);
+  background-color: hsla(200, 70%, 75%, .8);
   font-size: 1.2rem;
 }
 
@@ -94,7 +101,6 @@ article aside {
   background-color: hsla(0, 0%, 0%, .2);
   font-size: 0.7em;
   padding: 2em;
-  font-style:
 }
 
 article ul {
@@ -104,40 +110,38 @@ article ul {
 
 /*
 CSS GRID
-
-these are styles for the topic at hand */
+*/
 
 .dialog-off-canvas-main-canvas {
   display: grid;
   grid-template-columns: 3fr 9fr;
   grid-template-rows: repeat(auto, 1fr);
   grid-template-areas:
-               "header"
-                "main"
-                "footer";
+                "header header"
+                "nav nav"
+                "main main"
+                "footer footer";
 }
 
-main {
+.dialog-off-canvas-main-canvas > main {
   grid-column: 2 / span 2;
-  grid-row: 2 / span 2;
-  grid-area: "main";
+  grid-area: main;
 }
 
-header {
+.dialog-off-canvas-main-canvas > header {
   grid-column: 1 / span 2;
-  grid-area: "header";
+  grid-area: header;
+}
+ .dialog-off-canvas-main-canvas nav {
+   grid-area: nav;
 }
 
-footer {
-  grid-area: "footer";
+.dialog-off-canvas-main-canvas > footer {
+  grid-area: footer;
 }
 
-.dialog-off-canvas-main-canvas nav {
-  grid-row: 1 / span 1;
-}
-
-.dialog-off-canvas-main-canvas nav, footer {
-  grid-column: 1 / end;
+.dialog-off-canvas-main-canvas > nav, .dialog-off-canvas-main-canvas > footer {
+  grid-column: 1 / span 1;
 }
 
 article {
@@ -148,67 +152,78 @@ article {
 }
 
 article > * {
-  grid-column: 2 / end;
-}
-
-article header {
-  grid-column: 1/5;
-}
-article header h1 {
-  grid-column: 1 / span 4;
-  grid-row: 2 / span 1;
-  z-index: 1;
-  align-self: end;
-}
-
-article header figure {
-  grid-row: -1 / span 2;
-  grid-column: 2 / end;
-}
-
-article img {
   grid-column: 1 / end;
-}
-article h2 {
-  grid-column: 1 / span 4;
-}
-article p {
-  grid-column: 2 / span 3;
-}
-
-article aside {
-  grid-column: end / 3;
-}
-
-article .cp_embed_wrapper {
-  grid-column: 1 / span 4;
 }
 
 /* Hack to disable subarticles from getting their own grid. */
 
 article article, article article article {
-  display: block;
+  display: flex;
   width: 100%;
 }
-
+/*
 article .embedded-entity {
   grid-column: 1/end;
 }
-
+*/
 @media screen and (min-width: 800px) {
   body {
       max-width: 80vw;
+  }
+  .dialog-off-canvas-main-canvas > header{
+    text-align: left;
+    font-size: 1.5rem;
+  }
+
+  .dialog-off-canvas-main-canvas {
+    grid-template-areas:
+                  "header header"
+                  "nav main"
+                  "footer main";
   }
   .dialog-off-canvas-main-canvas nav,
   footer {
     grid-column: 1 / span 1;
     grid-row: auto;
   }
-  .dialog-off-canvas-main-canvas nav ul, footer ul {
+  .tasks ul {
     flex-direction: column;
-    align-content: space-evenly;
+    align-content: flex-start;
   }
-  .dialog-off-canvas-main-canvas nav li, footer li {
-    margin: 2em 0;
+
+  article header {
+    grid-column: 1/ span 4;
   }
+  article header h1 {
+    grid-column: 1 / end;
+    grid-row: 2 / span 1;
+    z-index: 1;
+    align-self: end;
+  }
+
+  article header figure {
+    grid-row: -1 / span 2;
+    grid-column: 2 / end;
+  }
+
+  article img {
+    grid-column: 1 / end;
+  }
+  article h2 {
+    grid-column: 1 / span 4;
+  }
+  article p, article ul, article ol {
+    grid-column: 2 / span 3;
+  }
+
+  article aside {
+    grid-column: end / 3;
+  }
+
+  article .cp_embed_wrapper {
+    grid-column: 1 / span 4;
+  }
+
+}
+
 }
