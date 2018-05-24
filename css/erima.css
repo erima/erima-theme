@@ -107,6 +107,10 @@ article ul {
   list-style-type: circle;
   margin-left: 1em;
 }
+/*hack to disable mysterious empty paragraph tags */
+p:empty {
+  display: none;
+}
 
 /*
 CSS GRID
