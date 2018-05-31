@@ -46,9 +46,9 @@
   ]
 %}
 {% block paragraph %}
-  <header{{ attributes.addClass(classes) }}>
+  <pre {{ attributes.addClass(classes) }}>
     {% block content %}
-      <h1>{{ content.title }}</h1>
+      <code>{{ content.field_plain_text_area }}</code>
     {% endblock %}
-  </header>
+  </pre>
 {% endblock paragraph %}
