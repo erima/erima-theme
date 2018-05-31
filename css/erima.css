@@ -145,7 +145,7 @@ CSS GRID
 }
 
 .dialog-off-canvas-main-canvas > nav, .dialog-off-canvas-main-canvas > footer {
-  grid-column: 1 / span 1;
+  grid-column: 1 / span 2;
 }
 
 article {
@@ -174,7 +174,7 @@ article .embedded-entity {
   body {
       max-width: 80vw;
   }
-  .dialog-off-canvas-main-canvas > header{
+  .dialog-off-canvas-main-canvas > header {
     text-align: left;
     font-size: 1.5rem;
   }
