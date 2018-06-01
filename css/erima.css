@@ -2,13 +2,13 @@
 body {
   font-family: "Noto Sans", helvetica, sans-serif;
   line-height: 1.5;
-  padding: 2vw 5vh;
+  padding: 2vh 0 2vh 5vw;
   margin: auto;
-  background-color: hsl(150, 10%, 90%);
-  background-image: linear-gradient(hsla(150, 10%, 80%, 0.2) 2px, transparent 0),
-    linear-gradient(90deg, hsla(150, 10%, 80%, 0.2) 2px, transparent 0),
-    linear-gradient(hsla(150, 10%, 80%, 0.2) 1px, transparent 0),
-    linear-gradient(90deg, hsla(150, 10%, 80%, 0.2) 1px, transparent 0);
+  background-color: hsl(200, 10%, 95%);
+  background-image: linear-gradient(hsla(200, 25%, 80%, 0.1) 2px, transparent 0),
+    linear-gradient(90deg, hsla(200, 25%, 80%, 0.1) 2px, transparent 0),
+    linear-gradient(hsla(200, 25%, 80%, 0.1) 1px, transparent 0),
+    linear-gradient(90deg, hsla(200, 25%, 80%, 0.1) 1px, transparent 0);
   background-size: 75px 75px, 75px 75px, 15px 15px, 15px 15px;
 }
 
@@ -40,9 +40,15 @@ header, .dialog-off-canvas-main-canvas nav, footer, h1, h2, h3, h4, h5, h6, pre 
     font-family: "Ubuntu Mono", monospace;
 }
 
-footer h1 {
+.hero {
+  max-height: 30vh;
+  overflow: hidden;
+}
+
+footer h2 {
   font-size: 1rem;
   text-decoration: underline;
+  margin: 1em 0;
 }
 
 pre {
@@ -57,9 +63,6 @@ pre {
     flex-wrap: wrap;
 }
 
-.tasks li {
-    margin: 2em 0;
-  }
 .dialog-off-canvas-main-canvas nav li:nth-child(1n),
 footer li:nth-child(1n) {
   transform: rotate(2deg);
@@ -89,12 +92,14 @@ article header {
 }
 
 article header h1 {
-  background-color: hsla(20, 100%, 75%, .8);
+  background-color: hsla(20, 100%, 75%, .85);
+  border-top: 1px solid hsla(20, 90%, 55%, .5);
 
 }
 
 article h2 {
   background-color: hsla(200, 70%, 75%, .8);
+  border-top: 1px solid hsla(200, 90%, 55%, .5);
   font-size: 1.2rem;
 }
 
@@ -119,16 +124,16 @@ CSS GRID
 
 .dialog-off-canvas-main-canvas {
   display: grid;
-  grid-template-columns: 3fr 9fr;
-  grid-template-rows: repeat(auto, 1fr);
+  grid-template-columns: 1.5fr 6fr 2fr .1fr;
+  grid-gap: 20px;
   grid-template-areas:
-                "header header"
-                "nav nav"
-                "main main"
-                "footer footer";
+                "header header header header"
+                "nav nav nav nav"
+                "main main main ."
+                "footer footer footer footer";
 }
 
-.dialog-off-canvas-main-canvas > main {
+main {
   grid-area: main;
 }
 
@@ -150,6 +155,10 @@ article {
 }
 
 article > * {
+  grid-column: 2 / end;
+}
+
+article > header {
   grid-column: 1 / end;
 }
 
@@ -168,11 +177,11 @@ article .embedded-entity {
 article header {
   display: grid;
   grid-template-columns: 1fr 2fr 6fr 4fr 1fr 1fr;
-  grid-template-rows: .5fr 1fr minmax(10px, 9fr);
+  grid-template-rows: .1fr auto minmax(10px, 1fr);
 }
 
 header > * {
-  grid-column: 1 / end;
+  grid-column: 2 / end;
 }
 
 article header h1 {
@@ -180,15 +189,18 @@ article header h1 {
   grid-row: 2 / span 1;
   z-index: 1;
 }
+
+article h2 {
+  grid-column: 1/ span 4;
+}
 article header .hero {
-  grid-column: 2 / span 4;
   grid-row: 1 / end;
 
 }
 
 @media screen and (min-width: 800px) {
   body {
-      max-width: 80vw;
+      padding: 0 0 0 10vw;
   }
   header {
     font-size: 1.5rem;
@@ -196,9 +208,13 @@ article header .hero {
 
   .dialog-off-canvas-main-canvas {
     grid-template-areas:
-                  "header header"
-                  "nav main"
-                  "footer main";
+                  "header header header header"
+                  "nav main main ."
+                  "footer main main .";
+  }
+
+  article {
+    max-width: 60vw;
   }
   .dialog-off-canvas-main-canvas > nav,
     .dialog-off-canvas-main-canvas > footer {
@@ -208,6 +224,10 @@ article header .hero {
     flex-direction: column;
     align-content: flex-start;
   }
+
+  .tasks li {
+      margin: 2em 0;
+    }
 
   article header h1 {
     /* grid-column: 1 / end;*/
