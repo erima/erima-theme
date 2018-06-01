@@ -88,12 +88,13 @@ article h1, article h2 {
 }
 
 article header {
-    font-size: 1.5rem;
 }
 
 article header h1 {
+  font-size: 1.5rem;
   background-color: hsla(20, 100%, 75%, .85);
   border-top: 1px solid hsla(20, 90%, 55%, .5);
+  margin: 1rem 0 0 0;
 
 }
 
@@ -162,6 +163,7 @@ article > header {
   grid-column: 1 / end;
 }
 
+
 /* Hack to disable subarticles from getting their own grid. */
 
 article article, article article article {
@@ -186,7 +188,7 @@ header > * {
 
 article header h1 {
   grid-column: 1 / span 4;
-  grid-row: 2 / span 1;
+  grid-row: 1 / span 1;
   z-index: 1;
 }
 
@@ -196,14 +198,12 @@ article h2 {
 article header .hero {
   grid-row: 1 / end;
 
+
 }
 
 @media screen and (min-width: 800px) {
   body {
       padding: 0 0 0 10vw;
-  }
-  header {
-    font-size: 1.5rem;
   }
 
   .dialog-off-canvas-main-canvas {
@@ -228,12 +228,6 @@ article header .hero {
   .tasks li {
       margin: 2em 0;
     }
-
-  article header h1 {
-    /* grid-column: 1 / end;*/
-    grid-row: 2 / span 1;
-    z-index: 1;
-  }
 
   header > * {
     grid-column: 2 / end;
