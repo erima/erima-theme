@@ -90,11 +90,7 @@ article h1, article h2 {
   padding: .5rem .8rem;
 }
 
-.hero img {
-  background-size: cover;
-}
-
-article header {
+article header h1 {
   background-color: hsla(20, 100%, 75%, .8);
   font-size: 1.5rem;
 }
@@ -135,12 +131,10 @@ CSS GRID
 }
 
 .dialog-off-canvas-main-canvas > main {
-  grid-column: 2 / span 2;
   grid-area: main;
 }
 
 .dialog-off-canvas-main-canvas > header {
-  grid-column: 1 / span 2;
   grid-area: header;
 }
  .dialog-off-canvas-main-canvas nav {
@@ -151,15 +145,10 @@ CSS GRID
   grid-area: footer;
 }
 
-.dialog-off-canvas-main-canvas > nav, .dialog-off-canvas-main-canvas > footer {
-  grid-column: 1 / span 2;
-}
-
 article {
   display: grid;
   grid-gap: 1vw;
   grid-template-columns: 1fr 2fr 6fr 4fr 2fr;
-  grid-template-rows: 4fr 2fr 2fr repeat(auto, 1fr);
 }
 
 article > * {
@@ -180,11 +169,15 @@ article .embedded-entity {
 
 article header {
   display: grid;
-  grid-template-rows: 4fr repeat(auto, 1fr);
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 1fr 2fr 6fr 4fr 2fr;
 }
+
+header > * {
+  grid-column: 1 / end;
+}
+
 article header h1 {
-  grid-column: 1 / span 4;
+  grid-column: 1 / end;
   grid-row: 2 / span 1;
   z-index: 1;
   align-self: end;
@@ -198,7 +191,7 @@ article header .hero {
   body {
       max-width: 80vw;
   }
-  .dialog-off-canvas-main-canvas > header {
+  header {
     text-align: left;
     font-size: 1.5rem;
   }
@@ -212,16 +205,12 @@ article header .hero {
   .dialog-off-canvas-main-canvas > nav,
     .dialog-off-canvas-main-canvas > footer {
     grid-column: 1 / span 1;
-    grid-row: auto;
   }
   .tasks ul {
     flex-direction: column;
     align-content: flex-start;
   }
 
-  article header {
-    grid-column: 1/ span 4;
-  }
   article header h1 {
     grid-column: 1 / end;
     grid-row: 2 / span 1;
@@ -229,8 +218,11 @@ article header .hero {
     align-self: end;
   }
 
-  article header figure {
-    grid-row: -1 / span 2;
+  header > * {
+    grid-column: 2 / end;
+  }
+
+  article header .hero {
     grid-column: 2 / end;
   }
 
