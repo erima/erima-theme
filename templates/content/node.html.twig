@@ -77,7 +77,7 @@
           {{ label }}
         </h1>
         <p>{{ content.field_header_text }}</p>
-        {% if content.field_hero.value %}
+        {% if content.field_hero is not empty %}
           <figure class="hero">{{ content.field_hero }}</figure>
         {% endif %}
       </header>
