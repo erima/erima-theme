@@ -36,7 +36,7 @@ header {
   text-align: center;
 }
 
-header, .dialog-off-canvas-main-canvas nav, footer, h1, h2, h3, h4, h5, h6 {
+header, .dialog-off-canvas-main-canvas nav, footer, h1, h2, h3, h4, h5, h6, pre {
     text-transform: uppercase;
     font-family: "Ubuntu Mono", monospace;
 }
@@ -50,6 +50,13 @@ footer h1 {
   font-size: 1rem;
   text-decoration: underline;
 }
+
+pre {
+  font-size: .8em;
+  border: 1px solid hsla(0, 0%, 0%, .3);
+  background-color: hsla(0, 100%, 100%, .2);
+}
+
 .tasks ul {
     display: flex;
     justify-content: space-evenly;
@@ -83,7 +90,7 @@ article h1, article h2 {
   padding: .5rem .8rem;
 }
 
-article > .hero img {
+.hero img {
   background-size: cover;
 }
 
@@ -170,6 +177,23 @@ article .embedded-entity {
   grid-column: 1/end;
 }
 */
+
+article header {
+  display: grid;
+  grid-template-rows: 4fr repeat(auto, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+}
+article header h1 {
+  grid-column: 1 / span 4;
+  grid-row: 2 / span 1;
+  z-index: 1;
+  align-self: end;
+}
+article header .hero {
+  grid-row: -1 / span 2;
+  grid-column: 2 / end;
+}
+
 @media screen and (min-width: 800px) {
   body {
       max-width: 80vw;
