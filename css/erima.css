@@ -2,7 +2,7 @@
 body {
   font-family: "Noto Sans", helvetica, sans-serif;
   line-height: 1.5;
-  padding: 2vh 0 2vh 5vw;
+  padding: 2vh 0 10vh 5vw;
   margin: auto;
   background-color: hsl(200, 10%, 95%);
   background-image: linear-gradient(hsla(200, 25%, 80%, 0.1) 2px, transparent 0),
@@ -35,7 +35,7 @@ header {
   margin: 20px 0;
 }
 
-header, .dialog-off-canvas-main-canvas nav, footer, h1, h2, h3, h4, h5, h6, pre {
+.dialog-off-canvas-main-canvas > header, .dialog-off-canvas-main-canvas nav, footer, h1 {
     text-transform: uppercase;
     font-family: "Ubuntu Mono", monospace;
 }
@@ -193,7 +193,7 @@ article header h1 {
 }
 
 article h2 {
-  grid-column: 1/ span 4;
+  grid-column: 1/ end;
 }
 article header .hero {
   grid-row: 1 / end;
