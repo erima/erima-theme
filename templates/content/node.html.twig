@@ -74,13 +74,13 @@
 
       <header>
         <h1 {{ title_attributes }}>
-        {{ label }}
+          {{ label }}
         </h1>
-        <p> {{ content.field_header_text }}</p>
-        <figure class="hero">{{ content.field_hero }}</figure>
+        <p>{{ content.field_header_text }}</p>
+        {% if content.field_hero.value %}
+          <figure class="hero">{{ content.field_hero }}</figure>
+        {% endif %}
       </header>
-
-
     {{ content.field_article_areas }}
     {{ content.field_tags }}
 
