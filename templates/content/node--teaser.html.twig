@@ -72,18 +72,12 @@
 #}
 <article{{ attributes }}>
 
-  {{ title_prefix }}
-  {% if teaser %}
-    <h3{{ title_attributes }}>
+  <header>
+    <h1{{ title_attributes }}>
       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h3>
-  {% endif %}
-  {{ title_suffix }}
-
-
-
-  <div{{ content_attributes }}>
+    </h1>
+  </header>
+  <p{{ content_attributes }}>
     {{ content }}
-  </div>
-
+  </p>
 </article>

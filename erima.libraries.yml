@@ -2,5 +2,5 @@ global-css:
   css:
     theme:
       css/reset.css: {}
-      'https://fonts.googleapis.com/css?family=Lora|Roboto:700': { type: external, minified: true }
+      'https://fonts.googleapis.com/css?family=Ubuntu+Mono|Noto+Sans': { type: external, minified: true }
       css/erima.css: {}
