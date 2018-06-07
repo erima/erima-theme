@@ -115,7 +115,7 @@ article ul {
   margin-left: 1em;
 }
 /*hack to disable mysterious empty paragraph tags */
-p:empty {
+p:empty, figure:empty {
   display: none;
 }
 
@@ -179,7 +179,7 @@ article .embedded-entity {
 article header {
   display: grid;
   grid-template-columns: 1fr 2fr 6fr 4fr 1fr 1fr;
-  grid-template-rows: .1fr auto minmax(10px, 1fr);
+  grid-template-rows: minmax(max-content, 1em) minmax(10px, 1fr);
 }
 
 header > * {
