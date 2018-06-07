@@ -1,19 +1,15 @@
-/* these are styles for codepen */
 body {
   font-family: "Noto Sans", helvetica, sans-serif;
   line-height: 1.5;
   padding: 2vh 0 10vh 5vw;
   margin: auto;
   background-color: hsl(200, 10%, 95%);
-  background-image: linear-gradient(hsla(200, 25%, 80%, 0.1) 2px, transparent 0),
-    linear-gradient(90deg, hsla(200, 25%, 80%, 0.1) 2px, transparent 0),
-    linear-gradient(hsla(200, 25%, 80%, 0.1) 1px, transparent 0),
-    linear-gradient(90deg, hsla(200, 25%, 80%, 0.1) 1px, transparent 0);
+  background-image: linear-gradient(hsla(200, 25%, 80%, 0.1) 2px, transparent 0), linear-gradient(90deg, hsla(200, 25%, 80%, 0.1) 2px, transparent 0), linear-gradient(hsla(200, 25%, 80%, 0.1) 1px, transparent 0), linear-gradient(90deg, hsla(200, 25%, 80%, 0.1) 1px, transparent 0);
   background-size: 75px 75px, 75px 75px, 15px 15px, 15px 15px;
 }
 
 a {
-  color: hsl(280, 100%,30%);
+  color: hsl(280, 100%, 30%);
 }
 
 p {
@@ -25,8 +21,7 @@ img {
   height: auto;
 }
 
-footer li a,
-.layout-sidebar-first li a {
+footer li a, .layout-sidebar-first li a {
   background-color: black;
   color: white;
 }
@@ -35,9 +30,9 @@ header {
   margin: 20px 0;
 }
 
-.dialog-off-canvas-main-canvas > header, .dialog-off-canvas-main-canvas nav, footer, h1 {
-    text-transform: uppercase;
-    font-family: "Ubuntu Mono", monospace;
+.dialog-off-canvas-main-canvas>header, .dialog-off-canvas-main-canvas nav, footer, h1 {
+  text-transform: uppercase;
+  font-family: "Ubuntu Mono", monospace;
 }
 
 .hero {
@@ -58,28 +53,24 @@ pre {
 }
 
 .tasks ul {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
-.dialog-off-canvas-main-canvas nav li:nth-child(1n),
-footer li:nth-child(1n) {
+.dialog-off-canvas-main-canvas nav li:nth-child(1n), footer li:nth-child(1n) {
   transform: rotate(2deg);
 }
 
-.dialog-off-canvas-main-canvas nav li:nth-child(2n),
-footer li:nth-child(2n) {
+.dialog-off-canvas-main-canvas nav li:nth-child(2n), footer li:nth-child(2n) {
   transform: rotate(-2deg);
 }
 
-.dialog-off-canvas-main-canvas nav li:nth-child(4n),
-footer li:nth-child(4n) {
+.dialog-off-canvas-main-canvas nav li:nth-child(4n), footer li:nth-child(4n) {
   transform: rotate(-5deg);
 }
 
-.dialog-off-canvas-main-canvas nav a,
-footer a {
+.dialog-off-canvas-main-canvas nav a, footer a {
   padding: 0.6em;
 }
 
@@ -87,15 +78,13 @@ article h1, article h2 {
   padding: .5rem .8rem;
 }
 
-article header {
-}
+article header {}
 
 article header h1 {
   font-size: 1.5rem;
   background-color: hsla(20, 100%, 75%, .85);
   border-top: 1px solid hsla(20, 90%, 55%, .5);
   margin: 1rem 0 0 0;
-
 }
 
 article h2 {
@@ -114,146 +103,115 @@ article ul {
   list-style-type: circle;
   margin-left: 1em;
 }
+
 /*hack to disable mysterious empty paragraph tags */
+
 p:empty, figure:empty {
   display: none;
 }
 
-/*
+@media screen and (min-width: 800px) {
+  body {
+    padding: 0 0 0 10vw;
+  }
+  article {
+    max-width: 60vw;
+  }
+  .tasks li {
+    margin: 2em 0;
+  }
+}
+
+@supports (display:grid) {
+  /*
 CSS GRID
 */
-
-.dialog-off-canvas-main-canvas {
-  display: grid;
-  grid-template-columns: 1.5fr 6fr 2fr .1fr;
-  grid-gap: 20px;
-  grid-template-areas:
-                "header header header header"
-                "nav nav nav nav"
-                "main main main ."
-                "footer footer footer footer";
-}
-
-main {
-  grid-area: main;
-}
-
-.dialog-off-canvas-main-canvas > header {
-  grid-area: header;
-}
- .dialog-off-canvas-main-canvas nav {
-   grid-area: nav;
-}
-
-.dialog-off-canvas-main-canvas > footer {
-  grid-area: footer;
-}
-
-article {
-  display: grid;
-  grid-gap: 1vw;
-  grid-template-columns: 1fr 2fr 6fr 4fr 2fr;
-}
-
-article > * {
-  grid-column: 2 / end;
-}
-
-article > header {
-  grid-column: 1 / end;
-}
-
-
-/* Hack to disable subarticles from getting their own grid. */
-
-article article, article article article {
-  display: block;
-  width: 100%;
-}
-/*
+  .dialog-off-canvas-main-canvas {
+    display: grid;
+    grid-template-columns: 1.5fr 6fr 2fr .1fr;
+    grid-gap: 20px;
+    grid-template-areas: "header header header header" "nav nav nav nav" "main main main ." "footer footer footer footer";
+  }
+  main {
+    grid-area: main;
+  }
+  .dialog-off-canvas-main-canvas>header {
+    grid-area: header;
+  }
+  .dialog-off-canvas-main-canvas nav {
+    grid-area: nav;
+  }
+  .dialog-off-canvas-main-canvas>footer {
+    grid-area: footer;
+  }
+  article {
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-columns: 1fr 2fr 6fr 4fr 2fr;
+  }
+  article>* {
+    grid-column: 2 / end;
+  }
+  article>header {
+    grid-column: 1 / end;
+  }
+  /* Hack to disable subarticles from getting their own grid. */
+  article article, article article article {
+    display: block;
+    width: 100%;
+  }
+  /*
 article .embedded-entity {
   grid-column: 1/end;
 }
 */
-
-article header {
-  display: grid;
-  grid-template-columns: 1fr 2fr 6fr 4fr 1fr 1fr;
-  grid-template-rows: minmax(max-content, 1em) minmax(10px, 1fr);
-}
-
-header > * {
-  grid-column: 2 / end;
-}
-
-article header h1 {
-  grid-column: 1 / span 4;
-  grid-row: 1 / span 1;
-  z-index: 1;
-}
-
-article h2 {
-  grid-column: 1/ end;
-}
-article header .hero {
-  grid-row: 1 / end;
-
-
-}
-
-@media screen and (min-width: 800px) {
-  body {
-      padding: 0 0 0 10vw;
+  article header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 6fr 4fr 1fr 1fr;
+    grid-template-rows: minmax(max-content, 1em) minmax(10px, 1fr);
   }
-
-  .dialog-off-canvas-main-canvas {
-    grid-template-areas:
-                  "header header header header"
-                  "nav main main ."
-                  "footer main main .";
-  }
-
-  article {
-    max-width: 60vw;
-  }
-  .dialog-off-canvas-main-canvas > nav,
-    .dialog-off-canvas-main-canvas > footer {
-    grid-column: 1 / span 1;
-  }
-  .tasks ul {
-    flex-direction: column;
-    align-content: flex-start;
-  }
-
-  .tasks li {
-      margin: 2em 0;
-    }
-
-  header > * {
+  header>* {
     grid-column: 2 / end;
   }
-
-  article header .hero {
-  }
-
-  article img {
-    grid-column: 1 / end;
+  article header h1 {
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 1;
+    z-index: 1;
   }
   article h2 {
-    grid-column: 1 / span 4;
+    grid-column: 1/ end;
   }
-  article p, article ul, article ol {
-    grid-column: 2 / span 3;
+  article header .hero {
+    grid-row: 1 / end;
   }
-
-  article aside {
-    grid-column: end / 3;
+  @media screen and (min-width: 800px) {
+    .dialog-off-canvas-main-canvas {
+      grid-template-areas: "header header header header" "nav main main ." "footer main main .";
+    }
+    .dialog-off-canvas-main-canvas>nav, .dialog-off-canvas-main-canvas>footer {
+      grid-column: 1 / span 1;
+    }
+    .tasks ul {
+      flex-direction: column;
+      align-content: flex-start;
+    }
+    header>* {
+      grid-column: 2 / end;
+    }
+    article img {
+      grid-column: 1 / end;
+    }
+    article h2 {
+      grid-column: 1 / span 4;
+    }
+    article p, article ul, article ol {
+      grid-column: 2 / span 3;
+    }
+    article aside {
+      grid-column: end / 3;
+    }
+    article .cp_embed_wrapper {
+      grid-column: 1 / span 4;
+    }
   }
-
-  article .cp_embed_wrapper {
-    grid-column: 1 / span 4;
-  }
-
-}
-
 }
