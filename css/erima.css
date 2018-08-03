@@ -9,7 +9,7 @@ body {
   margin: auto;
   background-color: hsl(20, 90%, 95%);
   background:
-      url(../assets/Popsicle.png) repeat 20% center,
+/*      url(../assets/Popsicle.png) repeat 20% center,*/
     linear-gradient(
       hsla(20, 90%, 95%, .9),
       hsla(300, 90%, 95%, .6)),
