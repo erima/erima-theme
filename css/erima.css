@@ -1,31 +1,12 @@
 @font-face {
-  font-family: "Thunderstorm";
-  src: url(../assets/Thunderstorm.ttf);
+/*  font-family: "Thunderstorm";
+  src: url(../assets/Thunderstorm.ttf);*/
 }
 body {
   font-family: "Noto Sans", helvetica, sans-serif;
   line-height: 1.5;
-  padding: 2vh 0 40vh 5vw;
   margin: auto;
-  background-color: hsl(20, 90%, 95%);
-  background:
-/*      url(../assets/Popsicle.png) repeat 20% center,*/
-    linear-gradient(
-      hsla(20, 90%, 95%, .9),
-      hsla(300, 90%, 95%, .6)),
-    linear-gradient(
-      180deg,
-      hsla(0, 80%, 50%, .3),
-      hsla(0, 80%, 50%, .0)90%),
-    linear-gradient(
-      45deg,
-      hsla(250, 80%, 50%, .3),
-      hsla(250, 80%, 50%, .0) 90%),
-     linear-gradient(
-      0deg,
-      hsla(350, 80%, 50%, .3),
-      hsla(350, 80%, 50%, .0) 90%);
-  background-attachment: fixed;
+  background-color: hsl(20, 12%, 99%);
 }
 
 a {
@@ -43,7 +24,6 @@ img {
 
 blockquote {
   font-size: 1.5rem;
-  text
 }
 
 footer li a, .layout-sidebar-first li a {
@@ -53,7 +33,6 @@ footer li a, .layout-sidebar-first li a {
 }
 
 header {
-  margin: 20px 0 0 0;
 }
 
 .dialog-off-canvas-main-canvas>header, .dialog-off-canvas-main-canvas nav, footer, h1 {
@@ -67,8 +46,16 @@ header {
 
 .dialog-off-canvas-main-canvas>header {
   letter-spacing: 1rem;
-  font-family: "Thunderstorm";
-  font-size: 4rem;
+  font-size: 2rem;
+  background-color: hsla(51, 100%, 67%, 1);
+  text-align: center;
+  height: 5rem;
+}
+
+#block-erima-branding {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero {
@@ -105,20 +92,17 @@ article h1, article h2 {
 article header {}
 
 article header h1 {
-  color: white;
   font-size: 1.5rem;
   margin: 1rem 0 0 0;
-  background-color: hsla(335, 70%, 60%, 0.9);
+  border-bottom: 1rem solid hsla(335, 70%, 60%, 0.9);
 }
 
 article h2 {
-  color: white;
   font-size: 1.2rem;
-  background-color: hsla(200, 70%, 60%, 0.9);
+  border-bottom: 1rem solid hsla(200, 70%, 60%, 0.9);
 }
 
 article h1 a, article h2 a {
-  color: white;
 }
 
 
@@ -142,9 +126,6 @@ p:empty, figure:empty {
 
 
 @media screen and (min-width: 800px) {
-  body {
-    padding-left: 10vw;
-  }
   article {
     max-width: 60vw;
   }
