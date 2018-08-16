@@ -5,16 +5,20 @@
 body {
   font-family: "Noto Sans", helvetica, sans-serif;
   line-height: 1.5;
-  margin: auto;
   background-color: hsl(20, 12%, 99%);
 }
+
+h1 {
+  font-size: 1.5rem;
+}
+
 
 a {
   color: hsl(280, 100%, 30%);
 }
 
 p {
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 img {
@@ -137,7 +141,7 @@ CSS GRID
   .contextual-region .portfolio {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 1vw;
+    grid-gap: 2rem;
   }
   article {
 
@@ -165,8 +169,8 @@ CSS GRID
   /* to add a white background on the grid I need to add markup :( */
 
   @media screen and (min-width: 800px) {
-    .dialog-off-canvas-main-canvas {
-
+    main {
+    margin: 0 2rem;
     }
     .dialog-off-canvas-main-canvas>nav, .dialog-off-canvas-main-canvas>footer {
     }
