@@ -2,7 +2,6 @@ body {
   font-family: "Open Sans", helvetica, sans-serif;
   line-height: 1.5;
   margin: auto;
-  background:
 }
 
 a {
@@ -20,17 +19,12 @@ img {
 
 blockquote {
   font-size: 1.5rem;
-  text
 }
 
 footer li a, .layout-sidebar-first li a {
   background-color: hsla(180, 70%, 40%, .9);
   color: white;
   test-decoration: none;
-}
-
-header {
-  margin: 20px 0 0 0;
 }
 
 .dialog-off-canvas-main-canvas>header a, .dialog-off-canvas-main-canvas nav a, footer a, h1 a {
@@ -42,6 +36,7 @@ header {
   font-size: 2rem;
   font-weight: 800;
   background-color: hsla(55, 94%, 54%, 1);
+
 }
 
 .hero {
@@ -116,7 +111,6 @@ p:empty, figure:empty {
 
 @media screen and (min-width: 800px) {
   body {
-    padding-left: 10vw;
   }
   article {
     max-width: 60vw;
@@ -133,6 +127,7 @@ CSS GRID
   .dialog-off-canvas-main-canvas {
     display: grid;
     grid-template-columns: 1.5fr 6fr 2fr .1fr;
+    grid-template-rows: 10rem auto;
     grid-gap: 20px;
     grid-template-areas: "header header header header" "nav nav nav nav" "main main main ." "footer footer footer footer";
   }
