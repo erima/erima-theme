@@ -1,31 +1,8 @@
-@font-face {
-  font-family: "Thunderstorm";
-  src: url(../assets/Thunderstorm.ttf);
-}
 body {
-  font-family: "Noto Sans", helvetica, sans-serif;
+  font-family: "Open Sans", helvetica, sans-serif;
   line-height: 1.5;
-  padding: 2vh 0 40vh 5vw;
   margin: auto;
-  background-color: hsl(20, 90%, 95%);
   background:
-/*      url(../assets/Popsicle.png) repeat 20% center,*/
-    linear-gradient(
-      hsla(20, 90%, 95%, .9),
-      hsla(300, 90%, 95%, .6)),
-    linear-gradient(
-      180deg,
-      hsla(0, 80%, 50%, .3),
-      hsla(0, 80%, 50%, .0)90%),
-    linear-gradient(
-      45deg,
-      hsla(250, 80%, 50%, .3),
-      hsla(250, 80%, 50%, .0) 90%),
-     linear-gradient(
-      0deg,
-      hsla(350, 80%, 50%, .3),
-      hsla(350, 80%, 50%, .0) 90%);
-  background-attachment: fixed;
 }
 
 a {
@@ -56,19 +33,15 @@ header {
   margin: 20px 0 0 0;
 }
 
-.dialog-off-canvas-main-canvas>header, .dialog-off-canvas-main-canvas nav, footer, h1 {
-  text-transform: uppercase;
-  font-family: "Ubuntu Mono", monospace;
-}
-
 .dialog-off-canvas-main-canvas>header a, .dialog-off-canvas-main-canvas nav a, footer a, h1 a {
   text-decoration: none;
 }
 
 .dialog-off-canvas-main-canvas>header {
-  letter-spacing: 1rem;
-  font-family: "Thunderstorm";
-  font-size: 4rem;
+  letter-spacing: .5rem;
+  font-size: 2rem;
+  font-weight: 800;
+  background-color: hsla(55, 94%, 54%, 1);
 }
 
 .hero {
