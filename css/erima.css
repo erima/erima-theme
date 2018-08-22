@@ -127,15 +127,18 @@ CSS GRID
   .dialog-off-canvas-main-canvas {
     display: grid;
     grid-template-columns: 1.5fr 6fr 2fr .1fr;
-    grid-template-rows: 10rem auto;
+    grid-template-rows: 10rem 5rem 2.5rem auto;
     grid-gap: 20px;
-    grid-template-areas: "header header header header" "nav nav nav nav" "main main main ." "footer footer footer footer";
+    grid-template-areas: "header header header header" "nav nav nav nav" "main main main main" "footer footer footer footer";
   }
   main {
     grid-area: main;
   }
   .dialog-off-canvas-main-canvas>header {
     grid-area: header;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .dialog-off-canvas-main-canvas nav {
     grid-area: nav;
@@ -183,9 +186,9 @@ CSS GRID
   /* to add a white background on the grid I need to add markup :( */
 
   @media screen and (min-width: 800px) {
-    .dialog-off-canvas-main-canvas {
+    /*.dialog-off-canvas-main-canvas {
       grid-template-areas: "header header header header" "nav main main ." "footer main main .";
-    }
+    }*/
     .dialog-off-canvas-main-canvas>nav, .dialog-off-canvas-main-canvas>footer {
       grid-column: 1 / span 1;
     }
