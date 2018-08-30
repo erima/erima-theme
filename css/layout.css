@@ -1,3 +1,9 @@
+.site-header, .site-slogan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .tasks ul {
   display: flex;
   justify-content: space-evenly;
