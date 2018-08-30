@@ -1,0 +1,89 @@
+.tasks ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+@supports (display:grid) {
+  /*
+CSS GRID
+*/
+  /*
+  Grid that controls the overall layout
+  */
+
+  .dialog-off-canvas-main-canvas {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "header"
+                         "nav"
+                         "main"
+                         "footer";
+   grid-template-rows: 1fr min-content auto 1fr;
+  }
+
+
+
+  /* Specific grid area for site header, also a flex area for contents */
+  .dialog-off-canvas-main-canvas> header {
+    grid-area: header;
+
+  }
+
+  /* this is so shitty, why does it name the block after my theme/site? */
+
+  #block-erima-branding {
+    display: grid;
+    grid-template-rows: minmax(10rem, 2fr) minmax(5rem, 1fr);
+  }
+
+  .dialog-off-canvas-main-canvas nav {
+    grid-area: nav;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  .dialog-off-canvas-main-canvas>footer {
+    grid-area: footer;
+  }
+
+  /* Each article is set to it's own grid */
+
+  article {
+    display: grid;
+    grid-gap: 1vw;
+    grid-template-columns: 1fr 2fr 6fr 4fr 2fr;
+    padding: 0 1rem;
+  }
+  article>* {
+    grid-column: 1 / end;
+    z-index: 2;
+  }
+  article>header {
+    grid-column: 1 / end;
+  }
+
+  article header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 6fr 4fr 1fr 1fr;
+    grid-template-rows: minmax(max-content, 1em) minmax(10px, 1fr);
+  }
+  header>* {
+    grid-column: 1 / end;
+  }
+  article header h1 {
+    grid-column: 1 / end;
+    grid-row: 1 / end;
+    z-index: 1;
+  }
+  article h2 {
+    grid-column: 1/ end;
+  }
+  article header .hero {
+    grid-row: 1 / end;
+  }
+
+  @media screen and (min-width: 800px) {}
+}

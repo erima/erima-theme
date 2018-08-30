@@ -3,4 +3,7 @@ global-css:
     theme:
       css/reset.css: {}
       'https://fonts.googleapis.com/css?family=Open+Sans:400,800': { type: external, minified: true }
-      css/erima.css: {}
+      css/layout.css: {}
+      css/color.css: {}
+      css/type-space.css: {}
+      css/shame.css: {}

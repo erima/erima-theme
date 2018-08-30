@@ -1,0 +1,11 @@
+/*hack to disable mysterious empty paragraph tags */
+
+p:empty, figure:empty {
+  display: none;
+}
+
+/* Hack to disable subarticles from getting their own grid. This is due to modules and views adding their own structure.  */
+article article, article article article {
+  display: block;
+  width: 100%;
+}
