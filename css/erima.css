@@ -2,6 +2,8 @@ body {
   font-family: "Open Sans", helvetica, sans-serif;
   line-height: 1.5;
   margin: auto;
+  background-color: hsla(0, 0%, 25%, 1);
+  color: hsla(0, 0%, 75%, 1);
 }
 
 a {
