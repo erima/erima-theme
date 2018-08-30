@@ -9,7 +9,7 @@ a {
 }
 
 p {
-  margin: 1em 0;
+/*  margin: 1rem 0;*/
 }
 
 img {
@@ -18,11 +18,13 @@ img {
 }
 
 blockquote {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  padding: 1rem 0;
 }
 
 footer li a, .layout-sidebar-first li a {
   border-bottom: 1em solid hsla(180, 70%, 40%, .9);
+  border-radius: .1rem;
   color: white;
   test-decoration: none;
 }
@@ -47,6 +49,8 @@ footer li a, .layout-sidebar-first li a {
 
 .site-slogan {
   font-size: 1.6rem;
+  padding: 1rem;
+  text-align: center;
 }
 
 
@@ -82,22 +86,21 @@ article {
 }
 
 article h1, article h2 {
-  padding: .5rem .8rem;
+  border-bottom: .4rem solid hsla(335, 70%, 60%, 0.9);
+  border-radius: .1rem;
 }
-
-article header {}
 
 article header h1 {
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin: 1rem 0 0 0;
-  border-bottom: 1em solid hsla(335, 70%, 60%, 0.9);
 }
 
 article h2 {
   color: black;
-  font-size: 1.2rem;
-  border-bottom: 1rem solid hsla(200, 70%, 60%, 0.9);
+  font-size: 1.1rem;
+  border-color: hsla(200, 70%, 60%, 0.9);
+
 }
 
 article h1 a, article h2 a {
@@ -183,9 +186,10 @@ CSS GRID
     display: grid;
     grid-gap: 1vw;
     grid-template-columns: 1fr 2fr 6fr 4fr 2fr;
+    padding: 0 1rem;
   }
   article>* {
-    grid-column: 2 / end;
+    grid-column: 1 / end;
     z-index: 2;
   }
   article>header {
@@ -203,11 +207,11 @@ CSS GRID
     grid-template-rows: minmax(max-content, 1em) minmax(10px, 1fr);
   }
   header>* {
-    grid-column: 2 / end;
+    grid-column: 1 / end;
   }
   article header h1 {
-    grid-column: 1 / span 4;
-    grid-row: 1 / span 1;
+    grid-column: 1 / end;
+    grid-row: 1 / end;
     z-index: 1;
   }
   article h2 {
