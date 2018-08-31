@@ -7,11 +7,11 @@ body, footer li a, .layout-sidebar-first li a, article header h1, article h2, ar
 }
 
 .dialog-off-canvas-main-canvas a {
-  color: hsla(55, 69%, 78%, 1); /* yellow */
+  color: hsla(63, 74%, 63%, 1); /* yellow */
 }
 
 .site-header {
-  background-color: hsla(55, 69%, 78%, 1); /* yellow */
+  background-color: hsla(63, 74%, 63%, 1); /* yellow */
 }
 
 .site-header a {
