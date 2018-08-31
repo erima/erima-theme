@@ -10,10 +10,13 @@
   flex-wrap: wrap;
 }
 
+.hero {
+/*  max-height: 30vh;
+  overflow: hidden;*/
+}
+
 @supports (display:grid) {
-  /*
-CSS GRID
-*/
+
   /*
   Grid that controls the overall layout
   */
@@ -28,19 +31,12 @@ CSS GRID
    grid-template-rows: 1fr min-content auto 1fr;
   }
 
-
-
-  /* Specific grid area for site header, also a flex area for contents */
+  /*
+  grid area for site header
+  */
   .dialog-off-canvas-main-canvas> header {
     grid-area: header;
 
-  }
-
-  /* this is so shitty, why does it name the block after my theme/site? */
-
-  #block-erima-branding {
-    display: grid;
-    grid-template-rows: minmax(10rem, 2fr) minmax(5rem, 1fr);
   }
 
   .dialog-off-canvas-main-canvas nav {
@@ -55,41 +51,53 @@ CSS GRID
     grid-area: footer;
   }
 
-  /* Each article is set to it's own grid */
+  /*
+  this is so shitty
+  why does it name the block after my theme/site?
+  */
+
+  #block-erima-branding {
+    display: grid;
+    grid-template-rows: minmax(10rem, 2fr) minmax(5rem, 1fr);
+  }
+
+
+  /*
+  article grid
+  */
 
   article {
     display: grid;
-    grid-gap: 1vw;
-    grid-template-columns: 1fr 2fr 6fr 4fr 2fr;
-    padding: 0 1rem;
+    grid-template-rows: 5rem max-content;
+    grid-row-gap: 1rem;
   }
-  article>* {
-    grid-column: 1 / end;
-    z-index: 2;
-  }
-  article>header {
-    grid-column: 1 / end;
-  }
+
+  /*
+  Article header Grid
+  */
 
   article header {
     display: grid;
-    grid-template-columns: 1fr 2fr 6fr 4fr 1fr 1fr;
-    grid-template-rows: minmax(max-content, 1em) minmax(10px, 1fr);
-  }
-  header>* {
-    grid-column: 1 / end;
-  }
-  article header h1 {
-    grid-column: 1 / end;
-    grid-row: 1 / end;
-    z-index: 1;
-  }
-  article h2 {
-    grid-column: 1/ end;
-  }
-  article header .hero {
-    grid-row: 1 / end;
   }
 
-  @media screen and (min-width: 800px) {}
+  .hero {
+    z-index: -1;
+  }
+
+  @media screen and (min-width: 800px) {
+
+    /*
+       a 2-up display for larger screens
+       only on Views that have cards custom css class
+    */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 1rem;
+      grid-row-gap: 2rem;
+      margin: 0 auto;
+    }
+    .cards, article {
+      max-width: 60vw;
+    }
 }
