@@ -1,6 +1,10 @@
+html {
+/*    font-size: 1.2em;*/
+}
+
 body {
   font-family: "Open Sans", helvetica, sans-serif;
-  line-height: 1.5;
+  line-height: 1.75;
   margin: auto;
 }
 
@@ -63,7 +67,7 @@ article {
 }
 
 article h1 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 800;
 }
 
@@ -83,7 +87,15 @@ article ul {
 }
 
 .header-text {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+}
+
+#block-erima-breadcrumbs {
+    font-size: .8rem;
+  }
+
+#block-erima-breadcrumbs li:not(:last-child)::after {
+  content: " > ";
 }
 
 @media screen and (min-width: 800px) {}

@@ -11,8 +11,15 @@
 }
 
 .hero {
-/*  max-height: 30vh;
-  overflow: hidden;*/
+  z-index: -1;
+  max-height: 10rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero img {
+  vertical-align: middle;
 }
 
 @supports (display:grid) {
@@ -45,6 +52,8 @@
 
   main {
     grid-area: main;
+    max-width: 96vw;
+    margin: 0 auto;
   }
 
   .dialog-off-canvas-main-canvas>footer {
@@ -58,7 +67,11 @@
 
   #block-erima-branding {
     display: grid;
-    grid-template-rows: minmax(10rem, 2fr) minmax(5rem, 1fr);
+    grid-template-rows: minmax(10rem, 3fr) minmax(5rem, 2fr);
+  }
+
+  #block-erima-breadcrumbs ol {
+    display: flex;
   }
 
 
@@ -68,7 +81,7 @@
 
   article {
     display: grid;
-    grid-template-rows: auto minmax(5rem, max-content) auto;
+/*    grid-template-rows: auto minmax(5rem, max-content) auto;*/
     grid-row-gap: 1rem;
   }
 
@@ -78,10 +91,26 @@
 
   article header {
     display: grid;
+    grid-template-areas:
+    "hero"
+    "title"
+    "after";
+    grid-template-rows: minmax(4fr, 5rem) 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  article h1 {
+    grid-area: title;
   }
 
   .hero {
     z-index: -1;
+    grid-area: hero;
+  }
+
+  article header:after {
+    content: "";
+    grid-area: after;
   }
 
   @media screen and (min-width: 800px) {
@@ -93,11 +122,19 @@
     .cards {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-column-gap: 1rem;
-      grid-row-gap: 2rem;
+      grid-gap: 6rem;
+
+    }
+
+    /* cards *and* article */
+    .cards, article, #block-erima-breadcrumbs ol {
+      max-width: 60vw;
       margin: 0 auto;
     }
-    .cards, article {
-      max-width: 60vw;
+
+    /* articles that are within cards */
+
+    .cards article {
+      grid-template-rows: 5rem auto;
     }
 }
