@@ -68,7 +68,7 @@
 
   article {
     display: grid;
-    grid-template-rows: 5rem max-content;
+    grid-template-rows: auto minmax(5rem, max-content) auto;
     grid-row-gap: 1rem;
   }
 

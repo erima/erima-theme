@@ -6,7 +6,7 @@ body, footer li a, .layout-sidebar-first li a, article header h1, article h2, ar
     color: hsla(0, 10%, 85%, 1); /* light grey */
 }
 
-.dialog-off-canvas-main-canvas a {
+.dialog-off-canvas-main-canvas a, article header h1 {
   color: hsla(63, 74%, 63%, 1); /* yellow */
 }
 

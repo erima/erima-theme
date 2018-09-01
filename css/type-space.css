@@ -82,4 +82,8 @@ article ul {
   margin-left: 1em;
 }
 
+.header-text {
+  font-size: 1.2rem;
+}
+
 @media screen and (min-width: 800px) {}
