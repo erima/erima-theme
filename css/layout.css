@@ -74,6 +74,29 @@
     display: flex;
   }
 
+  /*
+  Cards view Grid
+   */
+
+   .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-row-gap: 8rem;
+   }
+
+   /* cards *and* article */
+   .cards, article, #block-erima-breadcrumbs ol {
+     max-width: 90vw;
+     margin: 0 auto;
+     align-content: flex-start;
+   }
+
+   /* articles that are within cards */
+
+   .cards article {
+     grid-template-rows: 5rem auto;
+   }
+
 
   /*
   article grid
@@ -120,21 +143,12 @@
        only on Views that have cards custom css class
     */
     .cards {
-      display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 6rem;
-
     }
 
     /* cards *and* article */
     .cards, article, #block-erima-breadcrumbs ol {
       max-width: 60vw;
-      margin: 0 auto;
-    }
-
-    /* articles that are within cards */
-
-    .cards article {
-      grid-template-rows: 5rem auto;
     }
 }

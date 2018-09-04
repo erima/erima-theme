@@ -1,5 +1,5 @@
 html {
-/*    font-size: 1.2em;*/
+  font-size: .9rem;
 }
 
 body {
@@ -98,4 +98,8 @@ article ul {
   content: " > ";
 }
 
-@media screen and (min-width: 800px) {}
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 1.2em;
+  }
+}
