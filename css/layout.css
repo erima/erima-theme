@@ -58,6 +58,7 @@
 
   .dialog-off-canvas-main-canvas>footer {
     grid-area: footer;
+    margin: 6rem auto 0 auto;
   }
 
   /*
@@ -148,7 +149,7 @@
     }
 
     /* cards *and* article */
-    .cards, article, #block-erima-breadcrumbs ol {
+    .cards, article, #block-erima-breadcrumbs ol, footer {
       max-width: 60vw;
     }
 }
