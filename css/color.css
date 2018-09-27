@@ -12,7 +12,8 @@ body, footer li a, .layout-sidebar-first li a, article header h1, article h2, ar
 
 .site-header {
 
-  background-color: hsla(63, 74%, 63%, 1); /* yellow */
+  background-color: hsla(63, 94%, 63%, 1); /* yellow */
+  background-image: url("../assets/diagonal-noise.png");
 }
 
 .site-header a {
