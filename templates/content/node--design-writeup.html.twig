@@ -1,0 +1,17 @@
+<article{{ attributes }}>
+
+      <header>
+        <h1 {{ title_attributes }}>
+          {{ label }}
+        </h1>
+        {% if content.field_hero is not empty %}
+          <figure class="hero">{{ content.field_hero }}</figure>
+        {% endif %}
+      </header>
+
+      {{ content.field_design_story_bullet }}
+      {{ content.field_design_story_summary }}
+      {{ content.field_section }}
+
+
+</article>
