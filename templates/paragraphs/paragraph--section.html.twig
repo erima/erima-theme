@@ -1,0 +1,16 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+  ]
+%}
+
+<section>
+{% block paragraph %}
+  <h2>{{ content.field_title }}</h2>
+    {% block content %}
+      {{ content.field_full_section }}
+    {% endblock %}
+{% endblock paragraph %}
+</section>
