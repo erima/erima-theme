@@ -20,6 +20,10 @@ body, footer li a, .layout-sidebar-first li a, article header h1, article h2, ar
   color: hsla(0, 0%, 25%, 1); /*dark grey */
 }
 
+.splurb { /*This is the short blurb on the homepage via Drupal View*/
+  color: white;
+}
+
 pre, article aside {
   border: 1px solid hsla(0, 0%, 0%, .3); /* dark screen */
 }

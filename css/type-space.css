@@ -34,6 +34,11 @@ blockquote {
   padding: 1rem 0;
 }
 
+
+.splurb { /*This is the short blurb on the homepage via Drupal View*/
+  font-size: 1.2rem;
+}
+
 /* this is actually an h1 inside the header block referred to within this doc */
 .site-header {
   letter-spacing: .5rem;
