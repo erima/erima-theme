@@ -42,7 +42,7 @@ blockquote {
 /* this is actually an h1 inside the header block referred to within this doc */
 .site-header {
   letter-spacing: .5rem;
-  font-size: 2rem;
+  font-size: calc(1rem + 23vmin);
   font-weight: 800;
 
 }
@@ -93,6 +93,7 @@ article ul {
 
 #block-erima-breadcrumbs {
     font-size: .8rem;
+    margin-bottom: 2rem;
   }
 
 #block-erima-breadcrumbs li:not(:last-child)::after {

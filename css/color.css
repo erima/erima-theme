@@ -1,23 +1,25 @@
 body {
-  background-color: hsla(0, 0%, 25%, 1); /*dark grey */
+  background-color: hsla(0, 10%, 85%, 1); /*dark grey */
+  background-image: url("../assets/diagonal-noise.png");
+
 }
 
 body, footer li a, .layout-sidebar-first li a, article header h1, article h2, article h1 a, article h2 a {
-    color: hsla(0, 10%, 85%, 1); /* light grey */
-}
+  color: hsla(120, 10%, 26% 1);
 
 .dialog-off-canvas-main-canvas a, article header h1 {
-  color: hsla(63, 74%, 63%, 1); /* yellow */
+  /*color: hsla(63, 74%, 63%, 1); /* yellow */
 }
 
 .site-header {
-
-  background-color: hsla(63, 94%, 63%, 1); /* yellow */
-  background-image: url("../assets/diagonal-noise.png");
+  background-color: hsla(62.3, 80%, 5.1%, 0.2);
+  transform: skew(0deg, -10deg);
+  margin-top: -200px;
 }
 
 .site-header a {
-  color: hsla(0, 0%, 25%, 1); /*dark grey */
+  color: hsla(43, 10%, 7%, 0.3);
+    transform: skew(0deg, 10deg);
 }
 
 .splurb { /*This is the short blurb on the homepage via Drupal View*/
@@ -33,14 +35,14 @@ pre {
 }
 
 
-article header:after, article h2 {
-  border-width: 0 0 .4rem 0;
+/article header:after, article h2 {
+/*  border-width: 0 0 .4rem 0;
   border-style: solid;
-  border-color:hsla(335, 70%, 60%, 0.9); /* magenta */
+  border-color:hsla(120, 100%, 52.2%, 0.2); /* magenta */
 }
 
 article h2 {
-  border-color: hsla(200, 70%, 60%, 0.9); /* blue */
+  /*border-color: hsla(200, 70%, 60%, 0.9); /* blue */
 }
 
 article header:after {

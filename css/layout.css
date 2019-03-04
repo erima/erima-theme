@@ -68,7 +68,7 @@
 
   #block-erima-branding {
     display: grid;
-    grid-template-rows: minmax(10rem, 3fr) minmax(5rem, 2fr);
+    grid-template-rows: minmax(50vh, 4fr) minmax(5vh, 1fr);
   }
 
   #block-erima-breadcrumbs ol {
@@ -96,6 +96,7 @@
 
    .cards article {
      grid-template-rows: 5rem auto;
+     width: 100%;
    }
 
 
@@ -150,6 +151,6 @@
 
     /* cards *and* article */
     .cards, article, #block-erima-breadcrumbs ol, footer {
-      max-width: 60vw;
+      max-width: 90vw;
     }
 }
